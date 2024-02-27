@@ -56,3 +56,9 @@ print(
   "There are", rats_and_cheeses.count("🐀"), "🐀.\n" +
   "And ", rats_and_cheeses.count("🧀"), "🧀."
 )
+
+#List Creation With Expressions -> [expression]
+even_numbers = [2, 4, 6, 8, 10];
+
+even_numbers_second_power = [number**2 for number in even_numbers];
+print(even_numbers_second_power);
