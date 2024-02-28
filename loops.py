@@ -28,7 +28,6 @@ def displayMessy() :
 def matchElementInList(target, list_element) :
   return target == list_element;
 
-
 def queryInsideSingleList(target, list_index) :
   for x_index in range(len(messy[list_index])) :
     if matchElementInList(target, messy[list_index][x_index]) :
