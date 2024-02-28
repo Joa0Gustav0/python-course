@@ -14,6 +14,9 @@ def getTwoNumbersSum(number_one, number_two) :
 
 #Repeat functions with decorators
 
+def check(function) :
+  return function;
+
 def repeat(times) :
   def func_wrapper(function) :
     def args_wrapper(*args, **kwargs) :
@@ -22,6 +25,7 @@ def repeat(times) :
     return args_wrapper;
   return func_wrapper;
 
+@check
 @repeat(10)
 def sendGreeting(name) :
   print(f"Welcome, {name}!");
