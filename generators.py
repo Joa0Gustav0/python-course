@@ -1,12 +1,24 @@
-def getUserInOrder() :
-  users_list = ["Robert", "Paulo", "Jeremmy"];
+def getAvailablePasswordRequests(requests) :
+  while True :
+    requests -= 1;
+    yield requests;
+password_requests = getAvailablePasswordRequests(5);
 
-  for user in users_list :
-    yield user;
+password = "gustavo223829967hakjndsa";
+def tryPasswordRequest() :
+  available_requests = next(password_requests);
+  print("");
 
-user = getUserInOrder()
-while user:
-  print(f"The current user is: {next(user)}");
- 
-  input("Press \"Enter\" for getting the next user.")
+  if available_requests > 0 :
+    print("Your password is: {}".format(password));
+    print("⚠ You have, now, {} available password requests.".format(available_requests));
+  else :
+    print("⚠ You reached the password requests limit.")
+  print("-----------------------------\n")
+
+
+
+while True :
+  input("Press \"Enter\" for request your password: ");
+  tryPasswordRequest()
 
