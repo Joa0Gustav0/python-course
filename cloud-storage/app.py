@@ -2,7 +2,7 @@ import os;
 from google.cloud import storage;
 
 #Validate google applications into OS environment
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'C:/Users/guga6/OneDrive/Documentos/studies/python-course/cloud-storage/unimarket-416714-a351455fb7b2.json';
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'C:/Users/guga6/OneDrive/Documentos/studies/python-course/cloud-storage/unimarket.json';
 
 #Instance the client storage management -> storage.Client()
 client_storage = storage.Client();
