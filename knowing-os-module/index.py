@@ -10,6 +10,7 @@ environment = os.environ
 """ print(f"This desktop remains to {environment.get("USERNAME")}!"); """
 
 #WORKING WITH DIRECTORIES 💡
+
 #"os.getcwd" (Get Current Working Directory) is a function which returns the path where the terminal runs the code.
 """ print(os.getcwd()) """
 
@@ -28,5 +29,19 @@ environment = os.environ
 """ os.rmdir("TEST"); """
 
 #WORKING WITH FILES 💡
-""" os.chdir(r"C:\Users\guga6\Downloads");
-os.startfile("cyber-security.pdf"); """
+
+#"os.startfile" is a function which starts/open a file.
+#os.chdir(r"C:\Users\guga6\Downloads");
+""" os.startfile("cyber-security.pdf"); """
+
+#"os.rename" is a function which renames a file.
+#os.chdir(r"C:\Users\guga6\Downloads");
+""" os.rename("cyber-security.pdf", "cyber-security-roadmap.pdf");"""
+
+#"os.remove" is a function which removes a file.
+
+#"os.walk" is a function which returns a LIST containing ROOT, DIRECTORIES & FILES until a certain destiny directory.
+walk_until_cwd = os.walk(os.getcwd());
+for root, dirs, files in walk_until_cwd :
+  print(dirs);
+#The code above follows a certain path printing all the files names containing in each step of the walk.💡
