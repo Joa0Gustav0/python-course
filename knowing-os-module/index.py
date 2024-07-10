@@ -41,7 +41,43 @@ environment = os.environ
 #"os.remove" is a function which removes a file.
 
 #"os.walk" is a function which returns a LIST containing ROOT, DIRECTORIES & FILES until a certain destiny directory.
-walk_until_cwd = os.walk(os.getcwd());
+""" walk_until_cwd = os.walk(os.getcwd());
 for root, dirs, files in walk_until_cwd :
-  print(dirs);
+  print(dirs); """
 #The code above follows a certain path printing all the files names containing in each step of the walk.💡
+
+#WORKING WITH PAHTS (OS.PATH) 💡
+#"os.path" is the OS module's SUBMODULE which allows us to work with PATHS in the OS envionment.
+
+#"os.path.basename" is a function which returns the base name ("CORE NAME") of the CWD (Current Working Directory).
+""" cwd = os.getcwd();
+print(os.path.basename(cwd)); """
+
+#"os.path.commonpath" is a function which returns a path which is common part in the comparation between more than one path.
+#path_one = os.getcwd() + r"\challenges\file-manager";
+""" path_two = os.getcwd()
+
+print(path_one + "\n" + path_two);
+print("The common path, in this situation, is: " + os.path.commonpath([path_one, path_two])) """
+
+#"os.path.commonprefix" is a function that works like the "os.path.commonpath", but this function treats the path like a literal string. Then, the common path reffers to what is common between the strings!
+
+#path_one = os.getcwd() + r"\knowing-os-module\test-1";
+#path_two = os.getcwd() + r"\knowing-os-module\test-2";
+
+""" print(path_one + "\n" + path_two);
+print("The common path, in this situation, is: " + os.path.commonpath([path_one, path_two]))
+print("The common prefix, in this situation, is: " + os.path.commonprefix([path_one, path_two])) """
+
+#"os.path.dirname" is a function which returns the path until the CWD's parent directory (Like "os.getcwd() - 1");
+""" print(os.getcwd())
+print(os.path.dirname(os.getcwd())); """
+
+#"os.path.join" is a function for constructing a path by passing some informations which may compose the path.
+""" drive = input("Insert the computer drive for the search: ");
+user = input("Insert the computer user for the search: ");
+filename = input("Insert the file name for the opening: "); """
+
+#searching_path = os.path.join(drive,r'\Users',user,'Downloads')
+""" os.chdir(searching_path);
+os.startfile(filename); """
